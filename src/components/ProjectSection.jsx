@@ -6,7 +6,7 @@ const projects = [
     id: 1,
     title: "SaaS landing page",
     description: "A beautiful landing page app using react.",
-    image: "/projects/Project1.png",
+    image: "/projects/Project2.png",
     tags: ["React", "TailwindCSS"],
     demoURL: "#",
     githubURL: "#",
@@ -14,9 +14,10 @@ const projects = [
 
   {
     id: 2,
-    title: "Ecommerce",
-    description: "A beautiful landing page app using react.",
-    image: "/projects/Project2.png",
+    title: "Multi-Vendor E-Commerce Platform",
+    description:
+      "A robust e-commerce platform enabling multiple sellers to list and sell products to customers.",
+    image: "/projects/Project1.png",
     tags: ["React", "TailwindCSS"],
     demoURL: "#",
     githubURL: "#",
