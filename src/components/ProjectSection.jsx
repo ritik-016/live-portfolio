@@ -8,9 +8,9 @@ const projects = [
     description:
       "Built a real-time live classes platform with ZEGOCLOUD integration for interactive video classes",
     image: "/projects/live-class.png",
-    tags: ["React", "TailwindCSS"],
-    demoURL: "#",
-    githubURL: "#",
+    tags: ["MERN", "ZEGOCLOUD"],
+    demoURL: "https://live-class-ebon.vercel.app/",
+    githubURL: "https://github.com/ritik-016/live-class",
   },
 
   {
@@ -19,7 +19,7 @@ const projects = [
     description:
       "A robust e-commerce platform enabling multiple sellers to list and sell products to customers.",
     image: "/projects/shopease.png",
-    tags: ["React", "TailwindCSS"],
+    tags: ["MERN", "React.js"],
     demoURL: "https://shopease-bice-three.vercel.app/",
     githubURL: "https://github.com/ritik-016/shopease",
   },
