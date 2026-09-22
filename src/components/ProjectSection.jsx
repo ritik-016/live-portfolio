@@ -4,9 +4,10 @@ import { FaGithub } from "react-icons/fa";
 const projects = [
   {
     id: 1,
-    title: "SaaS landing page",
-    description: "A beautiful landing page app using react.",
-    image: "/projects/Project2.png",
+    title: "Live Classes",
+    description:
+      "Built a real-time live classes platform with ZEGOCLOUD integration for interactive video classes",
+    image: "/projects/live-class.png",
     tags: ["React", "TailwindCSS"],
     demoURL: "#",
     githubURL: "#",
@@ -14,13 +15,13 @@ const projects = [
 
   {
     id: 2,
-    title: "Multi-Vendor E-Commerce Platform",
+    title: "Multi-Vendor E-Commerce",
     description:
       "A robust e-commerce platform enabling multiple sellers to list and sell products to customers.",
-    image: "/projects/Project1.png",
+    image: "/projects/shopease.png",
     tags: ["React", "TailwindCSS"],
-    demoURL: "#",
-    githubURL: "#",
+    demoURL: "https://shopease-bice-three.vercel.app/",
+    githubURL: "https://github.com/ritik-016/shopease",
   },
 
   {

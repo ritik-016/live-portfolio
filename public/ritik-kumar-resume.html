@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ritik Kumar — Resume</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:      #ffffff;
+      --text:    #111111;
+      --muted:   #555555;
+      --border:  #dddddd;
+      --accent:  #1a1a1a;
+    }
+
+    @page {
+      size: A4;
+      margin: 10mm 14mm;
+    }
+
+    @media print {
+      html, body { background: #fff !important; margin: 0 !important; padding: 0 !important; }
+      .page {
+        padding: 0 !important;
+        margin: 0 !important;
+        box-shadow: none !important;
+        max-width: 100% !important;
+        font-size: 10.5px;
+        line-height: 1.38;
+      }
+      section { margin-bottom: 8px; }
+      hr { margin: 7px 0; }
+      .header { margin-bottom: 9px; }
+      .job { margin-bottom: 7px; }
+      .project { margin-bottom: 6px; }
+      .section-title { margin-bottom: 5px; }
+      .job-role { margin-bottom: 2px; }
+      .summary, .project-desc, .job ul li { font-size: 10.5px; }
+      .project-stack, .contact { font-size: 10px; }
+      .skills-grid { gap: 3px; }
+    }
+
+    body {
+      font-family: 'DM Sans', system-ui, sans-serif;
+      background: #f0f0f0;
+      color: var(--text);
+      font-size: 12.5px;
+      line-height: 1.45;
+    }
+
+    .page {
+      background: var(--bg);
+      max-width: 760px;
+      margin: 32px auto;
+      padding: 36px 44px;
+      box-shadow: 0 2px 16px rgba(0,0,0,0.08);
+    }
+
+    /* Header */
+    .header { margin-bottom: 14px; }
+    .header h1 {
+      font-size: 20px;
+      font-weight: 700;
+      letter-spacing: -0.3px;
+      color: var(--accent);
+    }
+    .header .title {
+      font-size: 13px;
+      color: var(--muted);
+      font-weight: 500;
+      margin-top: 2px;
+    }
+    .contact {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 4px 16px;
+      margin-top: 8px;
+      font-size: 12px;
+      color: var(--muted);
+    }
+    .contact a { color: var(--muted); text-decoration: none; }
+    .contact a:hover { color: var(--text); }
+
+    hr {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 12px 0;
+    }
+
+    /* Section */
+    section { margin-bottom: 14px; }
+    .section-title {
+      font-size: 10.5px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--muted);
+      margin-bottom: 10px;
+    }
+
+    /* Summary */
+    .summary { font-size: 13px; color: var(--text); max-width: 620px; }
+
+    /* Experience */
+    .job { margin-bottom: 11px; }
+    .job:last-child { margin-bottom: 0; }
+    .job-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 8px;
+    }
+    .job-header .company { font-weight: 600; font-size: 13px; }
+    .job-header .period {
+      font-size: 11.5px;
+      color: var(--muted);
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+    .job-role { font-size: 12px; color: var(--muted); margin-bottom: 5px; }
+    .job ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+    .job ul li {
+      font-size: 12.5px;
+      padding-left: 12px;
+      position: relative;
+      color: var(--text);
+    }
+    .job ul li::before {
+      content: '–';
+      position: absolute;
+      left: 0;
+      color: var(--muted);
+    }
+
+    /* Projects */
+    .project { margin-bottom: 9px; }
+    .project:last-child { margin-bottom: 0; }
+    .project-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 8px;
+    }
+    .project-header .proj-name { font-weight: 600; font-size: 13px; }
+    .project-header .proj-link {
+      font-size: 11.5px;
+      color: var(--muted);
+      text-decoration: none;
+    }
+    .project-desc {
+      font-size: 12.5px;
+      color: var(--text);
+      margin: 3px 0;
+    }
+    .project-stack {
+      font-size: 11.5px;
+      color: var(--muted);
+    }
+
+    /* Skills */
+    .skills-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+    .skill-row {
+      display: flex;
+      gap: 8px;
+      font-size: 12.5px;
+    }
+    .skill-label {
+      font-weight: 600;
+      min-width: 130px;
+      color: var(--text);
+      flex-shrink: 0;
+    }
+    .skill-values { color: var(--muted); }
+  </style>
+</head>
+<body>
+<div class="page">
+
+  <!-- Header -->
+  <div class="header">
+    <h1>Ritik Kumar</h1>
+    <div class="title">Full Stack Developer</div>
+    <div class="contact">
+      <span>Kashipur, India</span>
+      <span>+91 63960 42397</span>
+      <a href="mailto:ritikkumargahlot@gmail.com">ritikkumar@gmail.com</a>
+      <a href="https://github.com/ritik-016" target="_blank">github.com/ritik-016</a>
+      <a href="https://ritikkumar.in" target="_blank">ritikkumar.in</a>
+    </div>
+  </div>
+
+  <hr />
+
+  <!-- Summary -->
+  <section>
+    <div class="section-title">Summary</div>
+    <p class="summary">
+      Full Stack Developer with 6 months of hands-on experience building responsive web applications using modern frontend and backend technologies.
+      Skilled in developing end-to-end features, REST APIs, database integration, authentication, and scalable application architecture.
+      Currently expanding expertise in AI product development, with a focus on integrating AI capabilities into practical, user-focused applications.
+    </p>
+  </section>
+
+  <hr />
+
+  <!-- Experience -->
+  <section>
+    <div class="section-title">Experience</div>
+
+    <div class="job">
+      <div class="job-header">
+        <span class="company">Orchix Software Solutions</span>
+        <span class="period">april, 2026 — july, 2026</span>
+      </div>
+      <div class="job-role">Full Stack Engineer &middot; Uttarakhand, India</div>
+      <ul>
+        <li>Led the development of a personalized fitness recommendation system using AI algorithms</li>
+        <li>Worked across React, Next.js, Node.js,and MongoDB</li>
+        <li>Developed a personalized fitness AI assistant for user engagement</li>
+      </ul>
+    </div>
+
+    <!-- <div class="job">
+      <div class="job-header">
+        <span class="company">Aican</span>
+        <span class="period">2023 — 2024</span>
+      </div>
+      <div class="job-role">Software Engineer &middot; Mumbai, India</div>
+      <ul>
+        <li>Developed full-stack product features and reusable frontend component libraries</li>
+        <li>Built and integrated REST APIs with third-party services and business workflows</li>
+        <li>Improved performance and code quality across existing product surfaces</li>
+      </ul>
+    </div> -->
+
+    <!-- <div class="job">
+      <div class="job-header">
+        <span class="company">Bright Intern</span>
+        <span class="period">2022 — 2023</span>
+      </div>
+      <div class="job-role">Software Engineering Intern &middot; Hyderabad, India</div>
+      <ul>
+        <li>Built and maintained frontend and backend features on real client projects</li>
+        <li>Learned production development workflows collaborating with senior developers</li>
+      </ul>
+    </div> -->
+  </section>
+
+  <hr />
+
+  <!-- Projects -->
+  <section>
+    <div class="section-title">Projects</div>
+
+    <div class="project">
+      <div class="project-header">
+        <span class="proj-name">Live Classes</span>
+        <a class="proj-link" href="http://mygymsaathi.in" target="_blank">liveclass</a>
+      </div>
+      <div class="project-desc"> 
+        Built a real-time live classes platform with ZEGOCLOUD integration for interactive video classes, enabling instructors and students to join live sessions with real-time audio/video communication. Implemented user authentication, class management, responsive UI, and real-time session handling.
+      </div>
+      <div class="project-stack">Node.js · Express · MongoDB · React · JavaScript.js  · ZegoCloud</div>
+    </div>
+
+    <div class="project">
+      <div class="project-header">
+        <span class="proj-name">Multi-Vendor E-Commerce Platform</span>
+        <a class="proj-link" href="https://shopease-bice-three.vercel.app/" target="_blank">shopease</a>
+      </div>
+      <div class="project-desc">
+        Developed a responsive full-stack e-commerce platform using React, Node.js, Express.js, and MongoDB, featuring product browsing, categories, deals, best sellers, authentication, cart, and order management. Implemented a multi-vendor architecture with an analytics dashboard for managing products, sales, orders, and platform activity.
+
+      </div>
+      <div class="project-stack">React.js · JavaScript · TailwindCSS · Node.js · Express.js · MongoDB · REST APIs · JWT · GitHub · Vercel</div>
+    </div>
+
+    <div class="project">
+      <div class="project-header">
+        <span class="proj-name">Sherly Jewels ERP</span>
+        <a class="proj-link" href="https://youtube.com" target="_blank">youtube.com</a>
+      </div>
+      <div class="project-desc">
+        Client ERP for a jewellery business — Turborepo monorepo with shared TypeScript types, Zod schemas, and a component library across web and API. Covers inventory, orders, and operations.
+      </div>
+      <div class="project-stack">Next.js · TypeScript · Node.js · Bun · Turborepo · Zod · Prisma · PostgreSQL</div>
+    </div>
+  </section>
+
+  <hr />
+
+  <!-- Skills -->
+  <section>
+    <div class="section-title">Skills</div>
+    <div class="skills-grid">
+      <div class="skill-row">
+        <span class="skill-label">Languages</span>
+        <span class="skill-values">TypeScript, JavaScript, SQL</span>
+      </div>
+      <div class="skill-row">
+        <span class="skill-label">Frontend</span>
+        <span class="skill-values">Next.js, React, Tailwind CSS, shadcn/ui</span>
+      </div>
+      <div class="skill-row">
+        <span class="skill-label">Backend</span>
+        <span class="skill-values">Node.js, Express, REST APIs, WebSockets</span>
+      </div>
+      <div class="skill-row">
+        <span class="skill-label">Databases</span>
+        <span class="skill-values">PostgreSQL, MongoDB</span>
+      </div>
+      <!-- <div class="skill-row">
+        <span class="skill-label">AI / ML</span>
+        <span class="skill-values">RAG pipelines, Embeddings, Vector search, Groq, HuggingFace, Gemini</span>
+      </div> -->
+      <div class="skill-row">
+        <span class="skill-label">Tools &amp; Infra</span>
+        <span class="skill-values">Turborepo, Bun, Git, Vercel, Antigravity</span>
+      </div>
+    </div>
+  </section>
+
+</div>
+</body>
+</html>

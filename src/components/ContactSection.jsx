@@ -89,12 +89,12 @@ export const ContactSection = () => {
                 <a href="" target="_blank">
                   <FaLinkedin size={22} />
                 </a>
-                <a href="" target="_blank">
+                <a href="https://github.com/ritik-016" target="_blank">
                   <FaGithub size={22} />
                 </a>
-                <a href="" target="_blank">
+                {/* <a href="" target="_blank">
                   <FaInstagram size={22} />
-                </a>
+                </a> */}
               </div>
             </div>
           </div>
